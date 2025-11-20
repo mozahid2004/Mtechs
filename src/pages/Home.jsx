@@ -42,6 +42,12 @@ const Home = () => {
 
   return (
     <section id="home" className="home">
+        {/* LEFT SIDE */}
+        <div className="home-left">
+        <div className="image-border">
+          <img src={myImage} alt="My Photo" className="home-img" />
+        </div>
+      </div>
       {/* RIGHT SIDE */}
       <div className="home-right">
         <SocialMedia />
@@ -70,12 +76,7 @@ const Home = () => {
 
       </div>
 
-      {/* LEFT SIDE */}
-      <div className="home-left">
-        <div className="image-border">
-          <img src={myImage} alt="My Photo" className="home-img" />
-        </div>
-      </div>
+    
     </section>
   );
 };
