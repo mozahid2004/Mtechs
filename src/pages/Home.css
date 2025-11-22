@@ -11,29 +11,29 @@
   position: relative;
 }
 
-/* HEADINGS */
+/* HEADINGS – TEXT NEVER WRAPS */
 .home-right h1 {
-  font-size: clamp(1.8rem, 4vw, 48px);
+  font-size: clamp(1.6rem, 5vw, 48px);
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
   color: white;
-  display: flex;
+  display: inline-flex;
   gap: 8px;
-  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .home-right h1 span {
   color: #00a6ff;
 }
 
-/* MAKE BUTTONS CENTER */
+/* RIGHT SIDE */
 .home-right {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: left;
-  /* gap: 10px; */
+  width: 100%;
 }
 
 /* PARAGRAPH */
@@ -60,7 +60,6 @@
   font-size: clamp(13px, 1.6vw, 16px);
 }
 
-/* INDIVIDUAL BUTTON COLORS */
 .home-btn {
   background: #00c853;
   color: #fff;
@@ -88,20 +87,20 @@
   background: #0470aa;
 }
 
-/* ICON */
+/* ICONS */
 .wa-icon,
 .btn-icon {
   font-size: clamp(15px, 1.8vw, 20px);
 }
 
-/* LEFT SIDE */
+/* LEFT IMAGE */
 .home-left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* IMAGE WRAPPER */
+/* IMAGE BORDER EFFECT */
 .image-border {
   padding: 12px;
   border-radius: 50%;
@@ -120,7 +119,7 @@
   transform: scale(1.05);
 }
 
-/* RESPONSIVE IMAGE */
+/* IMAGE SIZE */
 .home-img {
   width: 100%;
   height: auto;
@@ -133,7 +132,7 @@
 /* Laptop */
 @media (max-width: 1200px) {
   .home-img {
-    max-width: 380px;
+    max-width: 360px;
   }
 }
 
@@ -148,39 +147,43 @@
   }
 
   .home-img {
-    max-width: 300px;
+    max-width: 290px;
   }
 
   .home-right {
-    text-align: center;
+    text-align: left;
     align-items: center;
+  }
+
+  .home-right h1 {
+    justify-content: center;
   }
 }
 
-/* Mobile – BUTTONS SIDE BY SIDE */
+/* Mobile (Buttons Side by Side) */
 @media (max-width: 768px) {
-
   .button-group {
     display: flex;
     justify-content: center;
     gap: 12px;
     width: 100%;
     margin-top: 10px;
-    flex-wrap: wrap; /* wrap if too small */
-  }
-
-  .call-btn,
-  .home-btn,
-  .whatsapp-btn {
-    width: auto;
+    flex-wrap: wrap;
   }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
+
+  /* FORCE NO TEXT WRAP ON SMALL MOBILE */
+  .home-right h1 {
+    font-size: clamp(1.4rem, 6vw, 32px);
+    white-space: nowrap;
+  }
+
   .home-img {
-    max-width: 220px;
-    min-width: 160px;
+    max-width: 200px;
+    min-width: 150px;
   }
 
   .button-group {
@@ -194,7 +197,7 @@
   }
 }
 
-/* No wrapping on heading text */
+/* Prevent typing text from breaking line */
 .typing-text {
   white-space: nowrap;
 }

@@ -61,22 +61,15 @@ const Home = () => {
           customers, and increase your revenue.
         </p>
 
-        {/* <a href="tel:+918260760349" className="home-btn call-btn">
-          <FaPhoneAlt className="btn-icon" /> Call Now
-        </a>
-        <a
-          href="https://wa.me/918260760349"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="home-btn whatsapp-btn"
-        >
-          <FaWhatsapp className="wa-icon" /> Chat on WhatsApp
-        </a> */}
 
         <div className="button-group">
-          <a href="#" className="call-btn">Call</a>
-          <a href="#" className="home-btn">Hire Me</a>
-          <a href="#" className="whatsapp-btn">WhatsApp</a>
+          <a href="tel:+918260760349" className="call-btn"> <FaPhoneAlt className="btn-icon" /> Call</a>
+      
+          <a className="whatsapp-btn"
+            href="https://wa.me/918260760349"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><FaWhatsapp className="btn-icon" />WhatsApp</a>
         </div>
 
 
